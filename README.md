@@ -17,7 +17,7 @@ PCKh0.2从62.4提高到64.81, 模型结构请查阅代码, 精度请查阅xls。
 
 **（2）stage_num=2，分辨率192x192调参阶段**
 
-stage_num=2时，网络设计可以活动的地方较大，随便设计一个里面超过先前stage_num=3
+stage_num=2时，网络设计可以活动的地方较大，随便设计一个立马超过先前stage_num=3
 
 这一阶段baseline是zq11_cpm， PCKh0.2达到65.98， 越改越差的包括zq12_cpm, zq13_cpm, zq14_cpm, zq15_cpm。
 
