@@ -19,9 +19,9 @@ PCKh0.2从62.4提高到64.81, 模型结构请查阅代码, 精度请查阅xls。
 
 stage_num=2时，网络设计可以活动的地方较大，随便设计一个立马超过先前stage_num=3
 
-这一阶段baseline是zq11_cpm， PCKh0.2达到65.98， 越改越差的包括zq12_cpm, zq13_cpm, zq14_cpm, zq15_cpm。
+这一阶段baseline是zq11_cpm， PCKh0.2达到65.98， 越改越差的包括zq12_cpm, zq13_cpm, zq14_cpm, zq15_cpm, zq22_cpm, zq23_cpm。
 
-调参过程包括zq22_cpm，（未完待续）
+zq24_cpm与zq11_cpm接近，PCHk0.2达到65.79
 
 模型结构请查阅代码，精度请查阅xls
 
@@ -33,3 +33,12 @@ stage_num=2时，网络设计可以活动的地方较大，随便设计一个立
 
 第一次改好的结构是zq21_cpm, PCKh0.2达到66.73
 
+# 80M计算量调参心得（双核A53约30ms）
+
+**（1）分辨率160x160调参阶段**
+
+这一阶段包括zq25_cpm、zq29_cpm，PCKh0.2只有不到0.57
+
+**（2）分辨率192x192调参阶段**
+
+这一阶段包括zq26_cpm, zq27_cpm, zq28_cpm, zq30_cpm, zq31_cpm, zq32_cpm, zq33_cpm,zq34_cpm, zq35_cpm， 由于设计模型时没有严格保证计算量一致，模型计算量从77M逐渐增加到了80M，最后zq35_cpm的PCKh0.2最高，达到59.37
